@@ -1,0 +1,112 @@
+[
+  {
+    "product_id": 1,
+    "product_name": "Men's Cotton T-Shirt",
+    "description": "Classic fit t-shirt made from 100% soft cotton.",
+    "price": 15.99,
+    "category": "Clothing/Men's/T-Shirts",
+    "image_url": "https://example.com/images/mens-cotton-tshirt.jpg",
+    "stock_quantity": 50,
+    "sku": "MT001",
+    "attributes": { "color": ["blue", "white", "black"], "size": ["S", "M", "L", "XL"] }
+  },
+  {
+    "product_id": 2,
+    "product_name": "Women's Denim Jeans",
+    "description": "Slim-fit jeans with a classic denim wash.",
+    "price": 49.99,
+    "category": "Clothing/Women's/Jeans",
+    "image_url": "https://example.com/images/womens-denim-jeans.jpg",
+    "stock_quantity": 30,
+    "sku": "WJ001",
+    "attributes": { "color": ["blue", "black"], "size": [28, 30, 32, 34] } 
+  },
+  {
+    "product_id": 3,
+    "product_name": "Leather Wallet",
+    "description": "Genuine leather wallet with multiple card slots and a coin pocket.",
+    "price": 29.99,
+    "category": "Accessories/Men's/Wallets",
+    "image_url": "https://example.com/images/leather-wallet.jpg",
+    "stock_quantity": 20,
+    "sku": "MW001",
+    "attributes": { "color": ["brown", "black"] }
+  },
+  {
+    "product_id": 4,
+    "product_name": "Sunglasses",
+    "description": "UV-protective sunglasses with a stylish frame.",
+    "price": 19.99,
+    "category": "Accessories/Unisex/Sunglasses",
+    "image_url": "https://example.com/images/sunglasses.jpg",
+    "stock_quantity": 40,
+    "sku": "US001",
+    "attributes": { "frame_color": ["black", "brown"], "lens_color": ["grey", "brown"] }
+  },
+  {
+    "product_id": 5,
+    "product_name": "Wireless Headphones",
+    "description": "Over-ear wireless headphones with noise cancellation.",
+    "price": 129.99,
+    "category": "Electronics/Audio/Headphones",
+    "image_url": "https://example.com/images/wireless-headphones.jpg",
+    "stock_quantity": 15,
+    "sku": "AH001",
+    "attributes": { "color": ["black", "white"] }
+  },
+  {
+    "product_id": 6,
+    "product_name": "Smartphone",
+    "description": "High-performance smartphone with a triple-lens camera.",
+    "price": 599.99,
+    "category": "Electronics/Phones/Smartphones",
+    "image_url": "https://example.com/images/smartphone.jpg",
+    "stock_quantity": 10,
+    "sku": "PS001",
+    "attributes": { "color": ["black", "silver"], "storage": ["128GB", "256GB"] }
+  },
+  {
+    "product_id": 7,
+    "product_name": "Laptop",
+    "description": "Lightweight laptop with a long battery life.",
+    "price": 899.99,
+    "category": "Electronics/Computers/Laptops",
+    "image_url": "https://example.com/images/laptop.jpg",
+    "stock_quantity": 8,
+    "sku": "CL001",
+    "attributes": { "color": ["silver", "grey"], "ram": ["8GB", "16GB"] }
+  },
+  {
+    "product_id": 8,
+    "product_name": "Coffee Maker",
+    "description": "Automatic coffee maker with a built-in grinder.",
+    "price": 79.99,
+    "category": "Home Appliances/Kitchen/Coffee Makers",
+    "image_url": "https://example.com/images/coffee-maker.jpg",
+    "stock_quantity": 25,
+    "sku": "KC001",
+    "attributes": { "color": ["black", "stainless steel"] }
+  },
+  {
+    "product_id": 9,
+    "product_name": "Blender",
+    "description": "Powerful blender with multiple speed settings.",
+    "price": 49.99,
+    "category": "Home Appliances/Kitchen/Blenders",
+    "image_url": "https://example.com/images/blender.jpg",
+    "stock_quantity": 35,
+    "sku": "KB001",
+    "attributes": { "color": ["white", "black"] }
+  },
+  {
+    "product_id": 10,
+    "product_name": "Running Shoes",
+    "description": "Lightweight running shoes with breathable mesh.",
+    "price": 79.99,
+    "category": "Sports & Outdoors/Running/Shoes",
+    "image_url": "https://example.com/images/running-shoes.jpg",
+    "stock_quantity": 45,
+    "sku": "SR001",
+    "attributes": { "color": ["blue", "black", "grey"], "size": [8, 9, 10, 11] }
+  }
+]
