@@ -1,0 +1,19 @@
+[project]
+name = "agentic-ecommerce"
+version = "0.1.0"
+description = "A demo project to leverage GenAI to interact with small ecommerces"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "langchain-core>=0.3.24",
+    "langchain-google-vertexai>=2.0.9",
+    "langgraph-checkpoint-sqlite>=2.0.1",
+    "langgraph>=0.2.59",
+    "langgraph-sdk>=0.1.43",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+]
