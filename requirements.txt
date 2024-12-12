@@ -1,7 +1,0 @@
-ipykernel
-langchain-core
-langchain-google-vertexai
-langchain-openai
-langgraph
-langgraph-checkpoint-sqlite
-langgraph-sdk
