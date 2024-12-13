@@ -16,7 +16,7 @@ curl -X POST "[CLOUD_RUN_URL]/invoke" -H "Content-Type: application/json" -d '{
 ## TODO
 - [ ] Add telemetry for Agent calls
 - [X] Create modules to simply imports (nvillaluenga)
-- [ ] Scripts to deploy web server (cloud run)
+- [X] Scripts to deploy web server (cloud run)
 - [ ] Create basic chat interface (decide framework)
 - [ ] Define set of tools
 - [ ] Enable access to Mercado Pago API
