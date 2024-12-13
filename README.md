@@ -3,7 +3,7 @@ An ecommerce Agent demonstrating different concepts and features of LangGraph
 
 ## TODO
 - [ ] Add telemetry for Agent calls
-- [ ] Create modules to simply imports
+- [X] Create modules to simply imports
 - [ ] Scripts to deploy web server (cloud run)
 - [ ] Create basic chat interface (decide framework)
 - [ ] Define set of tools
@@ -25,24 +25,19 @@ This project recommends using **uv** for managing dependencies.
 1. **Installation:**
     * **macOS and Linux:**
       ```bash
-      $ curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | sh
+      $ curl -LsSf https://astral.sh/uv/install.sh | sh
       ```
     * **Windows:**
       ```powershell
-      $ powershell -c "irm [https://astral.sh/uv/install.ps1](https://astral.sh/uv/install.ps1) | iex"
+      $ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
       ```
-2. **Initialize project**
-   ```bash
-   # Inside project's root
-   uv init
-   ```
 
-3. **Sync the project**
+2. **Sync the project**
    ```bash
    uv sync
    ```
 
-4. **Activate the virtual environment**
+3. **Activate the virtual environment**
    ```bash
    . .venv/bin/activate
    ````
