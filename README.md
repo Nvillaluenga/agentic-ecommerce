@@ -1,9 +1,21 @@
 # agentic-ecommerce
 An ecommerce Agent demonstrating different concepts and features of LangGraph
 
+## Run the agent
+
+**Deploy it to cloud run**
+- Run the deploy.sh script
+- Do a post request to /invoke
+```sh
+curl -X POST "[CLOUD_RUN_URL]/invoke" -H "Content-Type: application/json" -d '{
+  "messages": ["Recommend me some blue clothing from your catalog for men"],
+  "config": {"configurable": {"thread_id": "1"}}
+}'
+```
+
 ## TODO
 - [ ] Add telemetry for Agent calls
-- [X] Create modules to simply imports
+- [X] Create modules to simply imports (nvillaluenga)
 - [ ] Scripts to deploy web server (cloud run)
 - [ ] Create basic chat interface (decide framework)
 - [ ] Define set of tools
