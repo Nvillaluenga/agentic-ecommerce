@@ -24,7 +24,7 @@ async def invoke_graph(request: GraphRequest):
 
 if __name__ == "__main__":
     import os
-
     import uvicorn
+    
     port =  os.environ["PORT"]
     uvicorn.run(app, host="0.0.0.0", port=port)
