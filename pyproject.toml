@@ -13,6 +13,7 @@ dependencies = [
     "langgraph-sdk>=0.1.43",
     "fastapi>=0.115.6",
     "uvicorn>=0.32.1",
+    "langfuse>=2.56.2",
 ]
 
 [dependency-groups]
