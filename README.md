@@ -73,10 +73,8 @@ LANGFUSE_PUBLIC_KEY="<add your project's public key>"
 LANGFUSE_HOST=https://us.cloud.langfuse.com
 ```
 
-### Setup on Google Cloud [link](https://github.com/orgs/langfuse/discussions/4646)
-#### Features
-- Serverless hosting on Cloud Run
-- Secure data persistance with Cloud SQL and VPC network
+### Setup on Google Cloud 
+[Link to original repository](https://github.com/orgs/langfuse/discussions/4646)
 
 #### Prerequisites
 - Google Cloud account
