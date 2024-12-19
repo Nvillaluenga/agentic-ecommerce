@@ -33,7 +33,7 @@ resource "google_sql_database_instance" "postgres_instance" {
       }
 
       enabled                        = true
-      location                       = "us" # "asia"
+      location                       = "us-central1"
       point_in_time_recovery_enabled = true
       start_time                     = "21:00"
       transaction_log_retention_days = 7
