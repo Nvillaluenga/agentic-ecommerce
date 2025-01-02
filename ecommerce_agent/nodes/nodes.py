@@ -1,3 +1,4 @@
+import json
 from typing import Literal
 
 from langchain_core.language_models.chat_models import BaseChatModel
@@ -7,17 +8,24 @@ from ecommerce_agent.states.default_state import State
 
 
 def call_model(model: BaseChatModel, state: State):
+    messages = state["messages"]
+    system_message = ""
+
     # Get summary if it exists
     summary = state.get("summary", "")
     # If there is summary, then we add it
     if summary:
         # Add summary to system message
-        system_message = f"Summary of conversation earlier: {summary}"
+        system_message += f"Summary of conversation earlier: {summary}"
         # Append summary to any newer messages
-        messages = [SystemMessage(content=system_message)] + state["messages"]
-    else:
-        messages = state["messages"]
 
+    catalog = state.get("catalog", "")
+    if catalog:
+        catalog_message = f"Here is the catalog availble: {
+            json.dumps(catalog)}"
+        system_message += "\n" + catalog_message
+
+    messages = [SystemMessage(content=system_message)] + messages
     response = model.invoke(messages)
     return {"messages": response}
 
@@ -49,6 +57,7 @@ def summarize_conversation(model: BaseChatModel, state: State):
 # Determine whether to end or summarize the conversation
 
 
+# TODO: move this to a edges folder
 def should_summarize(state: State) -> Literal["conversation", "summarize_conversation"]:
     """Return the next node to execute."""
 

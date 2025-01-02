@@ -1,6 +1,11 @@
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+from langchain_core.messages import ToolMessage
+from langchain_core.tools import tool
+from langchain_core.tools.base import InjectedToolCallId
+from langgraph.types import Command
+from typing_extensions import Annotated
 
 file_path = './catalog.json'
 # If modifying these scopes, delete the file token.json.
@@ -24,7 +29,8 @@ def retrieve_catalog() -> dict:
     return {"catalog": json_string}
 
 
-def retrieve_catalog_sheets() -> dict:
+@tool
+def retrieve_catalog_sheets(tool_call_id: Annotated[str, InjectedToolCallId]):
     """
     Retrieves elements from the catalog.
 
@@ -51,14 +57,32 @@ def retrieve_catalog_sheets() -> dict:
         catalog = []
         keys = values[0]
         for row in values[1:]:
-            {key: row[i] for (i, key) in enumerate(keys)}
+            catalog_entry = {key: row[i] for (i, key) in enumerate(keys)}
+            catalog.append(catalog_entry)
 
-        print(values)
-        return catalog
+        return Command(
+            update={
+                "catalog": catalog,
+                # update the message history
+                "messages": [
+                    ToolMessage(
+                        "Successfully retrieved the catalog", tool_call_id=tool_call_id
+                    )
+                ],
+            }
+        )
 
     except HttpError as err:
         print(f"An error occurred: {err}")
-        return {"message": "Error, couldn't retrieve catalog"}
+        return Command(
+            update={
+                "messages": [
+                    ToolMessage(
+                        "Error, couldn't retrieve catalog", tool_call_id=tool_call_id
+                    )
+                ],
+            }
+        )
 
 
 if __name__ == "__main__":
