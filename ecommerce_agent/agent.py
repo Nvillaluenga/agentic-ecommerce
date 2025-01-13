@@ -7,8 +7,8 @@ from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.graph import START, StateGraph
 from langgraph.prebuilt import ToolNode, tools_condition
 
-from ecommerce_agent.nodes.nodes import (call_model, should_summarize,
-                                         summarize_conversation)
+from ecommerce_agent.nodes.edges import should_summarize
+from ecommerce_agent.nodes.nodes import call_model, summarize_conversation
 from ecommerce_agent.states.default_state import State
 
 db_path = "./state_db/example.db"
