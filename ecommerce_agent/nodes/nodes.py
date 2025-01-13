@@ -1,5 +1,4 @@
 import json
-from typing import Literal
 
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import HumanMessage, RemoveMessage, SystemMessage
@@ -55,17 +54,3 @@ def summarize_conversation(model: BaseChatModel, state: State):
     return {"summary": response.content, "messages": delete_messages}
 
 # Determine whether to end or summarize the conversation
-
-
-# TODO: move this to a edges folder
-def should_summarize(state: State) -> Literal["conversation", "summarize_conversation"]:
-    """Return the next node to execute."""
-
-    messages = state["messages"]
-
-    # If there are more than six messages, then we summarize the conversation
-    if len(messages) > 6:
-        return "summarize_conversation"
-
-    # Otherwise we can just end
-    return "conversation"
